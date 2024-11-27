@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/js/custom.js">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+    <!-- Owl Carousel JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+
+    <!-- Font -->
+    <link rel="stylesheet" href="./font/specimen_files/specimen_stylesheet.css">
+    <link rel="stylesheet" href="./font/stylesheet.css">
+    <!-- <link href="https://example-cdn.com/fonts/sequel-sans.css" rel="stylesheet"> -->
+    <!-- <link href="https://example-cdn.com/fonts/sequel-sans.css" rel="stylesheet"> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+                screens: {
+                    sm: "640px",
+                    md: "768px",
+                    lg: "1024px",
+                    xl: "1280px",
+                    "2xl": "1536px",
+                    'screen767': { 'max': '767px' },
+                    'screen575': { 'max': '575px' },
+                    'screen479': { 'max': '479px' },
+                    'screen360': { 'max': '360px' },
+                    // 'screen960': { 'max': '960px' },
+                    'screen1024': { 'max': '1024px' },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <header class="bg-[#74A6D0] py-[24px]">
+        <div class="container mx-auto">
+            <div class="header-content flex justify-between items-center">
+                <div class="flex gap-[12px] items-center screen575:gap-0">
+                    <div class="menu-btn">
+                        <label for="menu-toggle" class="main-menu-btn">
+                            <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M3 12h18M3 6h18M3 18h18" />
+                            </svg> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path d="M2.5 5.83333H17.5" stroke="black" stroke-width="1.70833"
+                                    stroke-linecap="round" />
+                                <path d="M2.5 10H17.5" stroke="black" stroke-width="1.70833" stroke-linecap="round" />
+                                <path d="M2.5 14.1667H17.5" stroke="black" stroke-width="1.70833"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="index.html"><img src="./assets/images/header-logo.svg" alt="header-logo"
+                            class="screen767:w-[178px]  screen479:ml-[10px]" /></a>
+                </div>
+                <ul class="menu flex gap-[48px]">
+                    <li><a href="#" class="text-white text-[16px] font-[500]">Our Process</a></li>
+                    <li><a href="#" class="text-white text-[16px] font-[500]">Reviews</a></li>
+                </ul>
+                <button
+                    class="p-[14px] bg-white rounded-[50px] text-[16px] hover:text-[#74A6D0] screen575:text-[12px] screen575:p-[10px] screen479:w-[100px] screen360:text-[10px]">Contact
+                    Us</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="side-menu">
+        <div class="sider relative h-[92vh]">
+            <div class="side-menu-header flex justify-end">
+                <label for="menu-toggle" class="close-btn" aria-label="Close menu">
+                    <!-- &times; -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                            stroke="#7D8187" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.17004 14.83L14.83 9.17" stroke="#7D8187" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M14.83 14.83L9.17004 9.17" stroke="#7D8187" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </label>
+            </div>
+            <div class="py-[12px]">
+                <a href="index.html"><img src="./assets/images/mobile_header_logo.svg" alt="header-logo"
+                        class="max-w-[178px]" /></a>
+            </div>
+            <!-- <div class="side-menu-content">
+            <ul class="nav-list">
+                <li>
+                    <p class="w-full max-w-full">Reviews</p>
+                </li>
+                <li>
+                    <p class="w-full max-w-full">Our Process</p>
+                </li>
+            </ul>
+        </div> -->
+            <div class="side-menu-footer">
+                <hr class="">
+                <a href="#" class="side-footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M10 12.625C8.55114 12.625 7.375 11.4489 7.375 10C7.375 8.55114 8.55114 7.375 10 7.375C11.4489 7.375 12.625 8.55114 12.625 10C12.625 11.4489 11.4489 12.625 10 12.625ZM10 7.625C8.69052 7.625 7.625 8.69052 7.625 10C7.625 11.3095 8.69052 12.375 10 12.375C11.3095 12.375 12.375 11.3095 12.375 10C12.375 8.69052 11.3095 7.625 10 7.625Z"
+                            fill="#7B8082" stroke="#7B8082" />
+                        <path
+                            d="M12.675 18.4917C12.5 18.4917 12.325 18.4667 12.15 18.425C11.6334 18.2833 11.2 17.9583 10.925 17.5L10.825 17.3333C10.3334 16.4833 9.65835 16.4833 9.16669 17.3333L9.07502 17.4917C8.80002 17.9583 8.36669 18.2917 7.85002 18.425C7.32502 18.5667 6.78335 18.4917 6.32502 18.2167L4.89169 17.3917C4.38335 17.1 4.01669 16.625 3.85835 16.05C3.70835 15.475 3.78335 14.8833 4.07502 14.375C4.31669 13.95 4.38335 13.5667 4.24169 13.325C4.10002 13.0833 3.74169 12.9417 3.25002 12.9417C2.03335 12.9417 1.04169 11.95 1.04169 10.7333V9.26668C1.04169 8.05001 2.03335 7.05835 3.25002 7.05835C3.74169 7.05835 4.10002 6.91668 4.24169 6.67502C4.38335 6.43335 4.32502 6.05002 4.07502 5.62502C3.78335 5.11668 3.70835 4.51668 3.85835 3.95001C4.00835 3.37501 4.37502 2.90001 4.89169 2.60835L6.33335 1.78335C7.27502 1.22501 8.51669 1.55001 9.08335 2.50835L9.18335 2.67501C9.67502 3.52501 10.35 3.52501 10.8417 2.67501L10.9334 2.51668C11.5 1.55001 12.7417 1.22501 13.6917 1.79168L15.125 2.61668C15.6334 2.90835 16 3.38335 16.1584 3.95835C16.3084 4.53335 16.2334 5.12502 15.9417 5.63335C15.7 6.05835 15.6334 6.44168 15.775 6.68335C15.9167 6.92502 16.275 7.06668 16.7667 7.06668C17.9834 7.06668 18.975 8.05835 18.975 9.27501V10.7417C18.975 11.9583 17.9834 12.95 16.7667 12.95C16.275 12.95 15.9167 13.0917 15.775 13.3333C15.6334 13.575 15.6917 13.9583 15.9417 14.3833C16.2334 14.8917 16.3167 15.4917 16.1584 16.0583C16.0084 16.6333 15.6417 17.1083 15.125 17.4L13.6834 18.225C13.3667 18.4 13.025 18.4917 12.675 18.4917ZM10 15.4083C10.7417 15.4083 11.4334 15.875 11.9084 16.7L12 16.8583C12.1 17.0333 12.2667 17.1583 12.4667 17.2083C12.6667 17.2583 12.8667 17.2333 13.0334 17.1333L14.475 16.3C14.6917 16.175 14.8584 15.9667 14.925 15.7167C14.9917 15.4667 14.9584 15.2083 14.8334 14.9917C14.3584 14.175 14.3 13.3333 14.6667 12.6917C15.0334 12.05 15.7917 11.6833 16.7417 11.6833C17.275 11.6833 17.7 11.2583 17.7 10.725V9.25835C17.7 8.73335 17.275 8.30001 16.7417 8.30001C15.7917 8.30001 15.0334 7.93335 14.6667 7.29168C14.3 6.65002 14.3584 5.80835 14.8334 4.99168C14.9584 4.77501 14.9917 4.51668 14.925 4.26668C14.8584 4.01668 14.7 3.81668 14.4834 3.68335L13.0417 2.85835C12.6834 2.64168 12.2084 2.76668 11.9917 3.13335L11.9 3.29168C11.425 4.11668 10.7334 4.58335 9.99169 4.58335C9.25002 4.58335 8.55835 4.11668 8.08335 3.29168L7.99169 3.12501C7.78335 2.77501 7.31669 2.65001 6.95835 2.85835L5.51669 3.69168C5.30002 3.81668 5.13335 4.02502 5.06669 4.27502C5.00002 4.52502 5.03335 4.78335 5.15835 5.00002C5.63335 5.81668 5.69169 6.65835 5.32502 7.30002C4.95835 7.94168 4.20002 8.30835 3.25002 8.30835C2.71669 8.30835 2.29169 8.73335 2.29169 9.26668V10.7333C2.29169 11.2583 2.71669 11.6917 3.25002 11.6917C4.20002 11.6917 4.95835 12.0583 5.32502 12.7C5.69169 13.3417 5.63335 14.1833 5.15835 15C5.03335 15.2167 5.00002 15.475 5.06669 15.725C5.13335 15.975 5.29169 16.175 5.50835 16.3083L6.95002 17.1333C7.12502 17.2417 7.33335 17.2667 7.52502 17.2167C7.72502 17.1667 7.89169 17.0333 8.00002 16.8583L8.09169 16.7C8.56669 15.8833 9.25835 15.4083 10 15.4083Z"
+                            fill="#7B8082" />
+                    </svg>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="side-footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M14.5333 12.1834L16.6667 10.05L14.5333 7.91669" stroke="#7B8082" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.13336 10.05H16.6084" stroke="#7B8082" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M9.80003 16.6666C6.1167 16.6666 3.13336 14.1666 3.13336 9.99998C3.13336 5.83331 6.1167 3.33331 9.80003 3.33331"
+                            stroke="#7B8082" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <section class="bg-[#74A6D0] py-[60px] screen1024:py-[48px]">
+        <div class="container screen1024:max-w-none screen1024:pr-0 screen1024:pl-0 mx-auto">
+            <div
+                class="flex flex-col justify-center items-center gap-[18px] mb-8 screen1024:!gap-[14px] screen1024:!mb-0  screen1024:container screen1024:mx-auto screen1024:pl-[20px] screen1024:pr-[20px]">
+                <h2
+                    class="text-[64px] screen1024:text-[54px] screen767:!text-[38px] text-white font-[500] max-w-[890px] mx-auto text-center leading-[1.3] screen1024:!leading-[1.1]">
+                    We Buy
+                    Properties, No hassle, Cash offers!</h2>
+                <button class="p-[14px] bg-white rounded-[50px] hover:text-[#74A6D0]">Get Free Estimations</button>
+            </div>
+            <!-- Owl Carousel -->
+            <div class="py-10 relative owl-carousel-section ">
+                <div class="owl-carousel o-event-slider">
+                    <div class="item">
+                        <img src="assets/images/hero_slider-1.svg" alt="Slide 1" />
+                        <p
+                            class="text-center text-white pt-[24px] text-[24px] screen767:text-[18px] screen767:pt-[12px]">
+                            Distressed
+                            Properties</p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/hero_slider-2.svg" alt="Slide 2" />
+                        <p
+                            class="text-center text-white pt-[24px] text-[24px] screen767:text-[18px] screen767:pt-[12px]">
+                            As is Condition
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/hero_slider-3.svg" alt="Slide 3" />
+                        <p
+                            class="text-center text-white pt-[24px] text-[24px] screen767:text-[18px] screen767:pt-[12px]">
+                            No Equity</p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/hero_slider-4.svg" alt="Slide 4" />
+                        <p
+                            class="text-center text-white pt-[24px] text-[24px] screen767:text-[18px] screen767:pt-[12px]">
+                            Take mortgage
+                            Payments</p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/hero_slider-5.svg" alt="Slide 5" />
+                        <p
+                            class="text-center text-white pt-[24px] text-[24px] screen767:text-[18px] screen767:pt-[12px]">
+                            Pre-Foreclosures
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-[100px] screen1024:py-[49px] bg-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col justify-center items-center gap-[16px] max-w-[832px] mx-auto">
+                <h2 class="head-text">Sell your Illinois house quickly in
+                    Just <span class="head-span-text">3 Easy Steps!</span></h2>
+                <p class="text">Our goal is to offer a convenient, transparent, and professional home-selling
+                    experience.
+                    With our unique
+                    3-step
+                    consultative approach, we take the time to understand each client's situation to provide the best
+                    support possible.</p>
+            </div>
+            <div class="my-[40px]">
+                <div class="flex gap-[16px] justify-center items-baseline screen767:flex-col screen767:items-center">
+                    <div
+                        class="mb-[64px] mt-[20px] screen767:mt-0 screen767:mb-0 screen767:flex screen767:flex-col screen767:justify-center screen767:items-center">
+                        <img src="./assets/images/sell_img.svg" alt="sell-img-1">
+                        <p class="max-w-[338px] sell-text">Call us, or tell us about your
+                            property online.</p>
+                    </div>
+                    <div
+                        class="mb-[64px] screen767:mb-0 screen767:flex screen767:flex-col screen767:justify-center screen767:items-center">
+                        <img src="./assets/images/sell_img-2.svg" alt="sell-img-1">
+                        <p class="max-w-[338px] sell-text">Schedule a property walk-through, either video or in-person.
+                        </p>
+                    </div>
+                    <div
+                        class="mb-[64px] screen767:mb-0 screen767:flex screen767:flex-col screen767:justify-center screen767:items-center">
+                        <img src="./assets/images/sell_img-3.svg" alt="sell-img-1">
+                        <p class="max-w-[338px] sell-text">Choose your closing date that works best for your schedule.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <button
+                    class="py-[18px] px-[32px] bg-[#00AEF0] rounded-[50px] flex gap-[12px] items-center screen767:w-full screen767:justify-center screen575:py-[12px]">
+                    <img src="./assets/images/get-cash-dollar.svg" alt="" class="w-[48px] h-[46px]">
+                    <p class="sell-btn-text">Get Cash</p>
+                </button>
+            </div>
+    </section>
+
+    <section class="dont-sec">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 gap-[100px] screen1024:grid-cols-1">
+                <div
+                    class="content flex flex-col justify-center items-center pr-[100px] screen1024:!pr-0 py-[60px] gap-[16px] screen1024:pt-[32px] screen1024:pb-0">
+                    <h2>Don't Just Take our word for it</h2>
+                    <p>Emperor Midwest has been working with homeowners in Illinois who prefer to sell their house a
+                        better
+                        way, faster and with less stress. We do this by purchasing houses "As-Is". This means no need to
+                        spend any more money on repairs, maintenance items, or general cleanup just to prepare your
+                        house
+                        for sale.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-[24px] place-content-center screen1024:hidden">
+                    <div class="testimonials-container">
+                        <div class="slider vertical-slider scroller">
+                            <div class="slick slick-01 scroller-inner">
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img1.svg" alt="img1" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img2.svg" alt="img2" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img3.svg" alt="img3" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img4.svg" alt="img4" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img1.svg" alt="img5" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials-container">
+                        <div class="slider slider22 vertical-slider scroller">
+                            <div class="slick slick-02 scroller-inner">
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img4.svg" alt="img6" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img3.svg" alt="img7" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img2.svg" alt="img8" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img1.svg" alt="img9" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial relative">
+                                        <div class="image-container">
+                                            <img src="./assets/images/dont_img2.svg" alt="img10" class="user-image">
+                                        </div>
+                                        <h3>Bryan J</h3>
+                                        <p>Chicago, IL</p>
+                                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                                        <div class="absolute top-0 mt-[24px]">
+                                            <img src="./assets/images/dont_common_img.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="screen1024:block hidden">
+            <div class="owl-carousel-section pb-14 relative pt-[24px] ml-[20px] screen1024:pb-20">
+                <div id="dont-slider" class="owl-carousel">
+                    <div class="testimonial relative item">
+                        <div class="image-container">
+                            <img src="./assets/images/dont_img1.svg" alt="img1" class="user-image">
+                        </div>
+                        <h3>Bryan J</h3>
+                        <p>Chicago, IL</p>
+                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                        <div class="absolute top-0 mt-[24px]">
+                            <img src="./assets/images/dont_common_img.svg" class="max-w-[32px]" />
+                        </div>
+                    </div>
+                    <div class="testimonial relative item">
+                        <div class="image-container">
+                            <img src="./assets/images/dont_img2.svg" alt="img2" class="user-image">
+                        </div>
+                        <h3>Bryan J</h3>
+                        <p>Chicago, IL</p>
+                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                        <div class="absolute top-0 mt-[24px]">
+                            <img src="./assets/images/dont_common_img.svg" class="max-w-[32px]" />
+                        </div>
+                    </div>
+                    <div class="testimonial relative item">
+                        <div class="image-container">
+                            <img src="./assets/images/dont_img3.svg" alt="img3" class="user-image">
+                        </div>
+                        <h3>Bryan J</h3>
+                        <p>Chicago, IL</p>
+                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                        <div class="absolute top-0 mt-[24px]">
+                            <img src="./assets/images/dont_common_img.svg" class="max-w-[32px]" />
+                        </div>
+                    </div>
+                    <div class="testimonial relative item">
+                        <div class="image-container">
+                            <img src="./assets/images/dont_img4.svg" alt="img4" class="user-image">
+                        </div>
+                        <h3>Bryan J</h3>
+                        <p>Chicago, IL</p>
+                        <p>"The whole experience went seamlessly from the beginning to the closing"</p>
+                        <div class="absolute top-0 mt-[24px]">
+                            <img src="./assets/images/dont_common_img.svg" class="max-w-[32px]" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-[60px] relative bg-white screen1024:py-[49px]">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 screen1024:grid-cols-1 screen767:gap-[12px]">
+                <div class="flex flex-col gap-[48px] justify-center screen1024:gap-[24px] screen1024:p-[20px]">
+                    <div class="content flex flex-col gap-[16px] justify-center screen1024:items-center">
+                        <h2>Just One Step From Selling Your House!</h2>
+                        <p>Get a FREE cash offer estimate on your property today and sell on your terms. Fill out the
+                            form
+                            below!</p>
+                    </div>
+                    <div class="flex flex-col gap-[24px]">
+                        <a href="#" class="flex gap-[8px] items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                fill="none">
+                                <path
+                                    d="M14.6468 12.7199C14.6468 12.9599 14.5935 13.2066 14.4802 13.4466C14.3668 13.6866 14.2202 13.9133 14.0268 14.1266C13.7002 14.4866 13.3402 14.7466 12.9335 14.9133C12.5335 15.0799 12.1002 15.1666 11.6335 15.1666C10.9535 15.1666 10.2268 15.0066 9.46016 14.6799C8.6935 14.3533 7.92683 13.9133 7.16683 13.3599C6.40016 12.7999 5.6735 12.1799 4.98016 11.4933C4.2935 10.7999 3.6735 10.0733 3.12016 9.31325C2.5735 8.55325 2.1335 7.79325 1.8135 7.03992C1.4935 6.27992 1.3335 5.55325 1.3335 4.85992C1.3335 4.40659 1.4135 3.97325 1.5735 3.57325C1.7335 3.16659 1.98683 2.79325 2.34016 2.45992C2.76683 2.03992 3.2335 1.83325 3.72683 1.83325C3.9135 1.83325 4.10016 1.87325 4.26683 1.95325C4.44016 2.03325 4.5935 2.15325 4.7135 2.32659L6.26016 4.50659C6.38016 4.67325 6.46683 4.82659 6.52683 4.97325C6.58683 5.11325 6.62016 5.25325 6.62016 5.37992C6.62016 5.53992 6.5735 5.69992 6.48016 5.85325C6.3935 6.00659 6.26683 6.16659 6.10683 6.32659L5.60016 6.85325C5.52683 6.92659 5.4935 7.01325 5.4935 7.11992C5.4935 7.17325 5.50016 7.21992 5.5135 7.27325C5.5335 7.32659 5.5535 7.36659 5.56683 7.40659C5.68683 7.62659 5.8935 7.91325 6.18683 8.25992C6.48683 8.60659 6.80683 8.95992 7.1535 9.31325C7.5135 9.66659 7.86016 9.99325 8.2135 10.2933C8.56016 10.5866 8.84683 10.7866 9.0735 10.9066C9.10683 10.9199 9.14683 10.9399 9.1935 10.9599C9.24683 10.9799 9.30016 10.9866 9.36016 10.9866C9.4735 10.9866 9.56016 10.9466 9.6335 10.8733L10.1402 10.3733C10.3068 10.2066 10.4668 10.0799 10.6202 9.99992C10.7735 9.90659 10.9268 9.85992 11.0935 9.85992C11.2202 9.85992 11.3535 9.88659 11.5002 9.94659C11.6468 10.0066 11.8002 10.0933 11.9668 10.2066L14.1735 11.7733C14.3468 11.8933 14.4668 12.0333 14.5402 12.1999C14.6068 12.3666 14.6468 12.5333 14.6468 12.7199Z"
+                                    stroke="#00AEF0" stroke-width="1.5" stroke-miterlimit="10" />
+                            </svg>
+                            <span class="house-contact">(773) 877-1384 </span>
+                        </a>
+                        <a href="#" class="flex gap-[8px] items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                fill="none">
+                                <path
+                                    d="M11.3335 14.1666H4.66683C2.66683 14.1666 1.3335 13.1666 1.3335 10.8333V6.16659C1.3335 3.83325 2.66683 2.83325 4.66683 2.83325H11.3335C13.3335 2.83325 14.6668 3.83325 14.6668 6.16659V10.8333C14.6668 13.1666 13.3335 14.1666 11.3335 14.1666Z"
+                                    stroke="#00AEF0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M11.3332 6.5L9.2465 8.16667C8.55983 8.71333 7.43317 8.71333 6.7465 8.16667L4.6665 6.5"
+                                    stroke="#00AEF0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="house-contact">info@emperormidwest.com</span>
+                        </a>
+                        <a href="#" class="flex gap-[8px] items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                fill="none">
+                                <path
+                                    d="M7.99992 9.45321C9.14867 9.45321 10.0799 8.52197 10.0799 7.37321C10.0799 6.22446 9.14867 5.29321 7.99992 5.29321C6.85117 5.29321 5.91992 6.22446 5.91992 7.37321C5.91992 8.52197 6.85117 9.45321 7.99992 9.45321Z"
+                                    stroke="#00AEF0" stroke-width="1.5" />
+                                <path
+                                    d="M2.4133 6.15992C3.72664 0.386587 12.28 0.393254 13.5866 6.16659C14.3533 9.55325 12.2466 12.4199 10.4 14.1933C9.05997 15.4866 6.93997 15.4866 5.5933 14.1933C3.7533 12.4199 1.64664 9.54659 2.4133 6.15992Z"
+                                    stroke="#00AEF0" stroke-width="1.5" />
+                            </svg>
+                            <span class="house-contact">600 E Golf Road, Ste 1200, Rolling Meadows IL 60008</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="form-class relative p-[40px] screen767:!p-0">
+                    <form class="screen1024:mx-auto">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name*</label>
+                                <input type="text" id="firstName" placeholder="Enter First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name*</label>
+                                <input type="text" id="lastName" placeholder="Enter Last Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone no</label>
+                                <input type="tel" id="phone" placeholder="Enter Phone no">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" placeholder="Enter Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" placeholder="Enter Address">
+                        </div>
+
+                        <div class="form-group mt-[24px] screen767:!mt-[16px]">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Share your thoughts"></textarea>
+                        </div>
+                        <div class="screen767:flex screen767:justify-center screen767:items-center">
+                            <button type="submit" class="submit-button">Get My Free Cash Offer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 screen1024:hidden">
+            <img src="./assets/images/form_img.svg" alt="">
+        </div>
+    </section>
+
+    <footer class="bg-black">
+        <div class="container mx-auto">
+            <div
+                class="py-[72px] footer-main screen1024:!grid-cols-1 screen1024:!gap-[32px] screen1024:!pt-[48px] screen1024:!pb-[34px]">
+                <div>
+                    <img src="./assets/images/footer_logo.svg" alt="footer-logo">
+                    <p class="footer-text py-[24px]">Lorem ipsum dolor sit amet consectetur. Euismod ut habitasse
+                        adipiscing massa
+                        pulvinar odio viverra
+                        non. Consequat
+                        aliquet fermentum id volutpat nibh enim mauris sed mus.</p>
+                    <div class="flex gap-[16px] items-center">
+                        <a href="#">
+                            <img src="./assets/images/linkedin.svg" alt="linkedin" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/images/twitter.svg" alt="twitter" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/images/ytube.svg" alt="youtube" />
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-[24px] screen1024:!grid-cols-1">
+                    <div>
+                        <h2 class="footer-head pb-[24px] screen1024:!pb-[16px]">Useful Link</h2>
+                        <div class="flex flex-col gap-[16px] screen1024:!gap-[12px]">
+                            <a href="#" class="footer-link">Home</a>
+                            <a href="#" class="footer-link">About Us</a>
+                            <a href="#" class="footer-link">Our Seruices</a>
+                            <a href="#" class="footer-link">Our Process</a>
+                            <a href="#" class="footer-link">Reviews</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="footer-head pb-[24px] screen1024:!pb-[16px]">Contact Us</h2>
+                        <div class="flex flex-col gap-[16px] screen1024:!gap-[12px]">
+                            <a href="#" class="footer-link">
+                                <div class="w-[16px] h-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M14.6468 12.2199C14.6468 12.4599 14.5935 12.7066 14.4802 12.9466C14.3668 13.1866 14.2202 13.4133 14.0268 13.6266C13.7002 13.9866 13.3402 14.2466 12.9335 14.4133C12.5335 14.5799 12.1002 14.6666 11.6335 14.6666C10.9535 14.6666 10.2268 14.5066 9.46016 14.1799C8.6935 13.8533 7.92683 13.4133 7.16683 12.8599C6.40016 12.2999 5.6735 11.6799 4.98016 10.9933C4.2935 10.2999 3.6735 9.57325 3.12016 8.81325C2.5735 8.05325 2.1335 7.29325 1.8135 6.53992C1.4935 5.77992 1.3335 5.05325 1.3335 4.35992C1.3335 3.90659 1.4135 3.47325 1.5735 3.07325C1.7335 2.66659 1.98683 2.29325 2.34016 1.95992C2.76683 1.53992 3.2335 1.33325 3.72683 1.33325C3.9135 1.33325 4.10016 1.37325 4.26683 1.45325C4.44016 1.53325 4.5935 1.65325 4.7135 1.82659L6.26016 4.00659C6.38016 4.17325 6.46683 4.32659 6.52683 4.47325C6.58683 4.61325 6.62016 4.75325 6.62016 4.87992C6.62016 5.03992 6.5735 5.19992 6.48016 5.35325C6.3935 5.50659 6.26683 5.66659 6.10683 5.82659L5.60016 6.35325C5.52683 6.42659 5.4935 6.51325 5.4935 6.61992C5.4935 6.67325 5.50016 6.71992 5.5135 6.77325C5.5335 6.82659 5.5535 6.86659 5.56683 6.90659C5.68683 7.12659 5.8935 7.41325 6.18683 7.75992C6.48683 8.10659 6.80683 8.45992 7.1535 8.81325C7.5135 9.16659 7.86016 9.49325 8.2135 9.79325C8.56016 10.0866 8.84683 10.2866 9.0735 10.4066C9.10683 10.4199 9.14683 10.4399 9.1935 10.4599C9.24683 10.4799 9.30016 10.4866 9.36016 10.4866C9.4735 10.4866 9.56016 10.4466 9.6335 10.3733L10.1402 9.87325C10.3068 9.70659 10.4668 9.57992 10.6202 9.49992C10.7735 9.40659 10.9268 9.35992 11.0935 9.35992C11.2202 9.35992 11.3535 9.38659 11.5002 9.44659C11.6468 9.50659 11.8002 9.59325 11.9668 9.70659L14.1735 11.2733C14.3468 11.3933 14.4668 11.5333 14.5402 11.6999C14.6068 11.8666 14.6468 12.0333 14.6468 12.2199Z"
+                                            stroke="#C3C8CA" stroke-width="1.5" stroke-miterlimit="10" />
+                                    </svg>
+                                </div>
+                                <span>(773) 877-1384 </span>
+                            </a>
+                            <a href="#" class="footer-link">
+                                <div class="w-[16px] h-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M11.3335 13.6666H4.66683C2.66683 13.6666 1.3335 12.6666 1.3335 10.3333V5.66659C1.3335 3.33325 2.66683 2.33325 4.66683 2.33325H11.3335C13.3335 2.33325 14.6668 3.33325 14.6668 5.66659V10.3333C14.6668 12.6666 13.3335 13.6666 11.3335 13.6666Z"
+                                            stroke="#C3C8CA" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M11.3332 6L9.2465 7.66667C8.55983 8.21333 7.43317 8.21333 6.7465 7.66667L4.6665 6"
+                                            stroke="#C3C8CA" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <span>info@emperormidwest.com</span>
+
+                                <!-- <span>info@emperormidwest.com</span> -->
+                            </a>
+                            <a href="#" class="footer-link">
+                                <div class="w-[16px] h-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M7.99992 8.95321C9.14867 8.95321 10.0799 8.02197 10.0799 6.87321C10.0799 5.72446 9.14867 4.79321 7.99992 4.79321C6.85117 4.79321 5.91992 5.72446 5.91992 6.87321C5.91992 8.02197 6.85117 8.95321 7.99992 8.95321Z"
+                                            stroke="#C3C8CA" stroke-width="1.5" />
+                                        <path
+                                            d="M2.4133 5.65992C3.72664 -0.113413 12.28 -0.106746 13.5866 5.66659C14.3533 9.05325 12.2466 11.9199 10.4 13.6933C9.05997 14.9866 6.93997 14.9866 5.5933 13.6933C3.7533 11.9199 1.64664 9.04659 2.4133 5.65992Z"
+                                            stroke="#C3C8CA" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <span>600 E Golf Road, Ste 1200, Rolling Meadows IL 60008</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-horizontal">
+            <p class="footer-text py-[26px] text-center">© Copyright 2024. Emperormidwest</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- <script src="./assets/js/jquery.min.js"></script> -->
+    <!-- <script src="./assets/js/jquery.fancybox.min.js"></script> -->
+    <script src="./assets/js/slick.min.js"></script>
+    <script>
+        //hero-section
+        $(document).ready(function () {
+            $(".o-event-slider").owlCarousel({
+                loop: true,
+                margin: 40,
+                nav: true,
+                dots: true,
+                items: 1,
+                center: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                navText: [
+                    ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.08002" stroke="#434749" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`,
+                    ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M9.00016 19.92L15.5202 13.4C16.2902 12.63 16.2902 11.37 15.5202 10.6L9.00016 4.08002" stroke="#434749" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`,
+                ],
+                // dotsData: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        center: true,
+                        nav: false,
+                        autoplay: false,
+                    },
+                    768: {
+                        items: 2.5,
+                        center: true,
+                        nav: false,
+                        autoplay: false,
+                    },
+                    1024: {
+                        items: 3,
+                        center: true,
+
+                    },
+                },
+            });
+        });
+
+        // dont-section desktop slider
+        $(document).ready(function () {
+            $("#vertical-carousel").owlCarousel({
+                loop: true,
+                items: 1,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true,
+                animateOut: 'slideOutUp',
+                animateIn: 'slideInUp'
+            });
+        });
+
+        // dont-section mobile slider
+        $(document).ready(function () {
+            $("#dont-slider").owlCarousel({
+                loop: true,
+                margin: 40,
+                nav: true,
+                items: 3,
+                // dots: true,
+                autoplay: false,
+                autoplayTimeout: 1000,
+                navText: [
+                    ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.08002" stroke="#434749" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                `,
+                    ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9.00016 19.92L15.5202 13.4C16.2902 12.63 16.2902 11.37 15.5202 10.6L9.00016 4.08002" stroke="#434749" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                `,
+                ],
+                responsive: {
+                    0: {
+                        items: 1.4,
+                    },
+                    575: {
+                        items: 2.2,
+                    },
+                    768: {
+                        items: 2.5,
+
+                    },
+                    1024: {
+                        items: 2.5,
+                    },
+                },
+            });
+        });
+
+        $(document).ready(function () {
+            $('.slick-01').slick({
+                vertical: true,
+                verticalSwiping: true,
+                slidesToShow: 3,
+                arrows: false,
+                autoplay: true,
+                pauseOnHover: false,
+                focusOnSelect: true,
+                dots: false,
+                centerMode: true,
+                cssEase: 'linear',
+                speed: 8000,
+                autoplaySpeed: 0,
+                slidesToScroll: 1
+            });
+            $('.slick-02').slick({
+                vertical: true,
+                verticalSwiping: true,
+                slidesToShow: 3,
+                arrows: false,
+                autoplay: true,
+                pauseOnHover: false,
+                focusOnSelect: true,
+                dots: false,
+                cssEase: 'linear',
+                centerMode: true,
+                speed: 8000,
+                autoplaySpeed: 0,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+</body>
+
+</html>

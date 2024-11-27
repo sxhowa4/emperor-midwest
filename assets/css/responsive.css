@@ -1,0 +1,170 @@
+@media (max-width: 1024px) {
+     
+    .main-menu-btn {
+                width: 36px;
+                height: 36px;
+                background: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .menu li a {
+                display: none;
+            }
+
+            .side-menu-footer {
+                display: block;
+            }
+
+            .header-content {
+                position: relative;
+            }
+            .footer-head{
+                font-size: 20px;
+            }
+            .content h2 , .head-text , .head-span-text{
+                font-size: 45px;
+                line-height: 55px;
+                text-align: center;
+            }
+            .content p{
+                text-align: center;
+            }
+            .owl-prev, .owl-next{
+                bottom: 0;
+                top: 100%;
+                /* transform: translateY(0%); */
+            }
+            .owl-prev , button.owl-prev{
+                left: 43%;
+                margin-top: 20px;
+                /* margin-right: 20px; */
+            }
+            .owl-next , button.owl-next{
+                right: 43%;
+                 margin-top: 20px;
+                 /* margin-left: 20px; */
+            }
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc !important;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000 !important;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+}
+@media(max-width:768px){
+     .footer-head{
+                font-size: 18px;
+            }
+            .footer-link{
+                font-size: 14px;
+            }
+             .content h2 , .head-text , .head-span-text{
+                font-size: 32px;
+                line-height: 48px;
+            }
+            .house-contact{
+                font-size: 12px;
+                line-height: 16px;
+            }
+            form{
+                padding: 32px !important;
+                max-width: 100% !important;
+            }
+            .form-row{
+                flex-direction: column;
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+            .form-group label , .form-group input, .form-group textarea{
+                font-size: 14px;
+            }
+            .testimonial {
+    padding: 32px 16px;
+}
+.image-container{
+    width: 80px;
+    height: 80px;
+}
+.testimonial h3{
+    font-size: 20px;
+}
+.sell-text{
+    padding-top: 14px;
+}
+.sell-btn-text{
+    font-size: 18px;
+}
+ .owl-carousel.container {
+        max-width: 100% !important; /* Ensure full width on small screens */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+ .owl-prev , button.owl-prev{
+                left: 40%;
+            }
+            .owl-next , button.owl-next{
+                right: 40%;
+            }
+            /* .submit-button{
+                max-width: 202px;
+                margin: auto;
+            } */
+}
+@media(max-width:579px){
+        form {
+        padding: 20px !important;
+    }
+    .form-group input, .form-group textarea{
+        padding: 12px;
+    }
+    .form-row{
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+}
+@media(max-width:479px){
+    .owl-prev , button.owl-prev{
+                left: 35%;
+            }
+            .owl-next , button.owl-next{
+                right: 35%;
+            }
+            /* .main-menu-btn{
+                width: 26px;
+                height: 26px;
+            } */
+            .menu-btn{
+                padding: 0;
+            }
+            /* .menu-btn svg{
+                width: 18px;
+                height: 18px;
+            } */
+}
+@media(max-width:368px){
+    .owl-prev , button.owl-prev{
+                left: 30%;
+            }
+            .owl-next , button.owl-next{
+                right: 30%;
+            }
+}
